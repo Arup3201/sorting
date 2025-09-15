@@ -58,3 +58,26 @@ func TestInsertionSort(t *testing.T) {
 		}
 	})
 }
+
+func TestQuickSort(t *testing.T) {
+	t.Run("QuickSort => [4, 1, 2, 3, 6, 5] -> [1, 2, 3, 4, 5, 6]", func(t *testing.T) {
+		arr := []int{4, 1, 2, 3, 6, 5}
+
+		got := QuickSort(arr, 0, len(arr)-1)
+
+		want := []int{1, 2, 3, 4, 5, 6}
+		if !slices.Equal(got, want) {
+			t.Errorf("InsertionSort failed, expected %v but got %v", want, got)
+		}
+	})
+	t.Run("QuickSort => [1, 2, 3, 4, 5, 6] -> [1, 2, 3, 4, 5, 6]", func(t *testing.T) {
+		arr := []int{1, 2, 3, 4, 5, 6}
+
+		got := QuickSort(arr, 0, len(arr)-1)
+
+		want := []int{1, 2, 3, 4, 5, 6}
+		if !slices.Equal(got, want) {
+			t.Errorf("InsertionSort failed, expected %v but got %v", want, got)
+		}
+	})
+}
