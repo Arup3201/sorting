@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestSort(t *testing.T) {
+func TestBubbleSort(t *testing.T) {
 	t.Run("[4, 1, 2, 5, 3] -> [1, 2, 3, 4, 5]", func(t *testing.T) {
 		arr := []int{4, 1, 2, 5, 3}
 
